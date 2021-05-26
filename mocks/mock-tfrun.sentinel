@@ -1,0 +1,54 @@
+id = "run-PWCytbDwAKqUYQRh"
+created_at = "2021-05-20T18:41:53.113Z"
+message = "Queued manually in Terraform Cloud"
+commit_sha = "d181219e4f273f130aa32ac8093b7987818eac51"
+speculative = false
+is_destroy = false
+refresh = true
+refresh_only = false
+replace_addrs = null
+target_addrs = null
+
+variables = {
+	"AWS_ACCESS_KEY_ID": {
+		"category":  "env",
+		"sensitive": false,
+	},
+	"AWS_DEFAULT_REGION": {
+		"category":  "env",
+		"sensitive": false,
+	},
+	"AWS_SECRET_ACCESS_KEY": {
+		"category":  "env",
+		"sensitive": false,
+	},
+	"region": {
+		"category":  "terraform",
+		"sensitive": false,
+	},
+}
+
+organization = {
+	"name": "digitech",
+}
+
+workspace = {
+	"auto_apply":  false,
+	"created_at":  "2021-05-16T20:33:26.851Z",
+	"description": "Container services of AWS",
+	"id":          "ws-QTe9NqgZMbAvXy1L",
+	"name":        "digitech-containers",
+	"vcs_repo": {
+		"branch":             "",
+		"display_identifier": "bit-cloner/digitech-containers",
+		"identifier":         "bit-cloner/digitech-containers",
+		"ingress_submodules": false,
+	},
+	"working_directory": "/eks",
+}
+
+cost_estimate = {
+	"delta_monthly_cost":    "0.0",
+	"prior_monthly_cost":    "0.0",
+	"proposed_monthly_cost": "0.0",
+}
