@@ -30,5 +30,5 @@ to talk to terraform cloud.
 sentimocker interactively asks the user to choose from a list of options to get the right mock data
 for the right plan/run.
 It then unpacks the tar.gz file into /mocks directory
-Developers can then copy requred files into test/ folder and edit mock files as permissionspass and
+Developers can then copy required files into test/ folder and edit mock files as per pass and
 fail criteria.
