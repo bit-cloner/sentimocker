@@ -23,7 +23,7 @@ to talk to terraform cloud.
 #### Inputs & selections
 `API token : A bearer token from terraform cloud account`
 
-sentimocker interactively asks to choose from a list of options to get the right mock data
+sentimocker interactively asks the user to choose from a list of options to get the right mock data
 for the right plan/run.
 It then unpacks the tar.gz file into /mocks directory
 Developers can then copy requred files into test/ folder and edit mock files as permissionspass and
