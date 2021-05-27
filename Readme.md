@@ -1,6 +1,7 @@
 # Sentimocker
 
 :star: Star me on GitHub — it motivates collaborators to contribute
+
 sentimocker is an interactive CLI tool that can help with testing Sentinel polocies.
 Sentinel is Hashicorp's policy as code language.Testing sentinel policies locally while
 developing requires downloading mock terraform plan data.This data can be downloaded
