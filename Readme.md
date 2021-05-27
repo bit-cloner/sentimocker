@@ -12,7 +12,7 @@ You can learn about testing Sentinel policies [here](https://medium.com/hashicor
 ### Why do I need this
 The current approach of manually downloading mock files from Terraform UI breaks the flow of
 building and testing policies. Developers need to login to terraform cloud account in a browser
-then look for the download mock files button then untar the package.As developers love their IDE
+then look for the download mock files button then untar the package.As a developer I know that all developers love their IDE
 and Terminal ecosystem it would improve their velocity if they could write and test
 sentinel policies without shifting to other systems.
 
