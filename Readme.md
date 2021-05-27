@@ -16,7 +16,7 @@ then look for the download mock files button then untar the package.As developer
 and Terminal ecosystem it would improve their velocity if they could write and test
 sentinel policies without shifting to other systems.
 
-### How does sentimocker works
+### How does sentimocker work
 Sentimocker uses Hashicorp's official golang SDK for terraform enterprise to make
 API calls to terraform cloud. To do this sentimocker needs an API token with appropriate permissions
 to talk to terraform cloud.
