@@ -18,10 +18,11 @@ sentinel policies without shifting to other systems.
 
 ### How does sentimocker work
 Sentimocker uses Hashicorp's official golang SDK for terraform enterprise to make
-API calls to terraform cloud. To do this sentimocker needs an API token with appropriate permissions
+API calls to terraform cloud. In order to do this sentimocker needs an API token with appropriate permissions
 to talk to terraform cloud.
 #### Inputs & selections
 `API token : A bearer token from terraform cloud account`
+
 sentimocker interactively asks to choose from a list of options to get the right mock data
 for the right plan/run.
 It then unpacks the tar.gz file into /mocks directory
