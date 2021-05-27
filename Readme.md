@@ -20,6 +20,10 @@ sentinel policies without shifting to other systems.
 Sentimocker uses Hashicorp's official golang SDK for terraform enterprise to make
 API calls to terraform cloud. In order to do this sentimocker needs an API token with appropriate permissions
 to talk to terraform cloud.
+
+### Demo
+![til](./usage.gif)
+
 #### Inputs & selections
 `API token : A bearer token from terraform cloud account`
 
