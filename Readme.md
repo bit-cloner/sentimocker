@@ -1,4 +1,6 @@
 # Sentimocker
+ 
+__Sentinel Mocker__
 
 :star: Star me on GitHub — it motivates collaborators to contribute
 
@@ -32,3 +34,12 @@ for the right plan/run.
 It then unpacks the tar.gz file into /mocks directory
 Developers can then copy required files into test/ folder and edit mock files as per pass and
 fail criteria.
+
+#### Known Issues
+
+Sentimocker is written in a day as a helper tool when writing Sentinel policies.It is not throughly tested so some edge cases might fail.
+It is also not designed to be used in production environments.
+
+If the organisation name or workspace name in your terraform cloud account contains the charecters "==>" sentimocker is
+going to have trouble parsing workspace ID. The code used "==>" as a delimiter to find IDs ofobjects.
+
