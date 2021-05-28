@@ -21,3 +21,6 @@ binaries/
 ### Go Patch ###
 /vendor/
 /Godeps/
+
+### Files ###
+go-build-all.sh
