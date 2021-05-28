@@ -11,6 +11,7 @@ import (
 	"log"
 	"os"
 	"strings"
+	"time"
 )
 
 func after(value string, a string) string {
@@ -25,7 +26,6 @@ func after(value string, a string) string {
 	}
 	return value[adjustedPos:len(value)]
 }
-
 func main() {
 	tftoken := ""
 	prompt := &survey.Password{
@@ -111,7 +111,7 @@ func main() {
 	fmt.Println("Found plan")
 	var planExportID string
 	if plan.Exports == nil {
-		fmt.Print("Creating Plan Export ... \n")
+		fmt.Print("Requesting Plan Export ... \n")
 		planExport, err := client.PlanExports.Create(context.Background(), tfe.PlanExportCreateOptions{
 			Plan:     plan,
 			DataType: tfe.PlanExportType(tfe.PlanExportSentinelMockBundleV0),
@@ -120,6 +120,12 @@ func main() {
 			log.Fatal(err, "failed to read Plan ")
 		}
 		planExportID = planExport.ID
+		fmt.Println("Status of plan export is ", planExport.Status) // When Status is "finished" mocks are ready to be downloaded.
+		if planExport.Status != "finished" {
+			fmt.Println("waiting for Plan export to be ready for download .....⌛")
+			time.Sleep(6 * time.Second)
+		}
+		// TODO check if export status is ready to download
 	} else {
 		fmt.Print("Found existing Plan Export \n")
 		planExportID = plan.Exports[0].ID // Just grab the first one?
@@ -128,7 +134,7 @@ func main() {
 	// Now download plan export by giving plan export id
 	buff, err := client.PlanExports.Download(context.Background(), planExportID)
 	if err != nil {
-		log.Fatal(err, "failed to download plan export")
+		log.Fatal(err, "failed to download plan export most likely due to export being not ready for download. try again.")
 	}
 	reader := bytes.NewReader(buff)
 	// Save the downloaded object onto disk

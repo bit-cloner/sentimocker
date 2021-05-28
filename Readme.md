@@ -1,6 +1,7 @@
 # Sentimocker
  
 __Sentinel Mocker__
+***
 
 :star: Star me on GitHub — it motivates collaborators to contribute
 
